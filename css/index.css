@@ -1,0 +1,891 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.find .del {
+  transform: scale(0, 0);
+}
+
+.header {
+  width: 100%;
+  height: 44px;
+  background: black;
+}
+
+.header .header-inner {
+  width: 980px;
+  margin: 0 auto;
+}
+
+.header .header-inner .searchz-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  width: 682px;
+  height: 44px;
+  opacity: 0;
+  z-index: -1;
+}
+
+.header .header-inner .searchz-box .search-box {
+  width: 100%;
+  height: 100%;
+  transform: translate3d(50px, 0, 0);
+  transition: transform .8s ease;
+}
+
+.header .header-inner .searchz-box .search-box .logo-box {
+  width: 40px;
+  height: 44px;
+  background: url(../img/search.svg) no-repeat center center;
+  float: left;
+}
+
+.header .header-inner .searchz-box .search-box input {
+  width: 642px;
+  height: 44px;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  font-style: normal;
+  color: #fff;
+  outline: none;
+}
+
+.header .header-inner .searchz-box .card {
+  width: 100%;
+  height: 196px;
+  background: #fff;
+  opacity: 0;
+  padding: 10px 10px 20px;
+}
+
+.header .header-inner .searchz-box .card li {
+  height: 30px;
+  font-size: 15px;
+  margin-top: 3px;
+  padding-left: 50px;
+  line-height: 30px;
+  color: #999;
+  transform: translate3d(50px, 0, 0);
+}
+
+.header .header-inner .searchz-box .card li:hover {
+  background: #f2f2f2;
+}
+
+.header .header-inner .searchz-box .card li:nth-child(1) {
+  transition: transform 0.8s ease 0.1s;
+}
+
+.header .header-inner .searchz-box .card li:nth-child(2) {
+  transition: transform 0.8s ease 0.2s;
+}
+
+.header .header-inner .searchz-box .card li:nth-child(3) {
+  transition: transform 0.8s ease 0.3s;
+}
+
+.header .header-inner .searchz-box .card li:nth-child(4) {
+  transition: transform 0.8s ease 0.4s;
+}
+
+.header .header-inner .searchz-box .card li:nth-child(5) {
+  transition: transform 0.8s ease 0.5s;
+}
+
+.header .header-inner .searchz-box .card li:nth-child(6) {
+  transition: transform 0.8s ease 0.6s;
+}
+
+.header .header-inner .searchz-box .card .xiala h3 {
+  font-size: 12px;
+  font-weight: 400;
+  color: #999;
+  letter-spacing: normal;
+  line-height: 30px;
+}
+
+.header .header-inner .nav {
+  text-align: justify;
+  height: 44px;
+}
+
+.header .header-inner .nav::after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+
+.header .header-inner .nav .del {
+  transition: transform .8s ease;
+}
+
+.header .header-inner .phone {
+  position: relative;
+  z-index: 1050;
+  display: none;
+}
+
+.header .header-inner .phone .daohang {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 44px;
+  text-align: center;
+  float: left;
+  margin-left: 16px;
+}
+
+.header .header-inner .phone .daohang .dao {
+  display: block;
+  width: 20px;
+  height: 1px;
+  background: #fff;
+}
+
+.header .header-inner .phone .daohang .dao1 {
+  position: absolute;
+  top: 16px;
+}
+
+.header .header-inner .phone .daohang .dao2 {
+  position: absolute;
+  top: 24px;
+}
+
+.header .header-inner .zhankai-box {
+  box-sizing: content-box;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  background: #000;
+  z-index: 1000;
+  padding: 98px 50px 0;
+  display: none;
+}
+
+.header .header-inner .zhankai-box .sxz-box {
+  width: 320px;
+  height: 554px;
+}
+
+.header .header-inner .zhankai-box .sxz-box .zc-link {
+  width: 100%;
+  height: 48px;
+  text-align: left;
+  line-height: 48px;
+  border-bottom: 1px solid #ccc;
+}
+
+.header .header-inner .zhankai-box .sxz-box .zc-link a {
+  color: rgba(225, 225, 225, 0.8);
+}
+
+.header .header-inner .item {
+  display: inline-block;
+}
+
+.header .header-inner .item a {
+  display: block;
+  height: 44px;
+}
+
+.header .header-inner .item .bag {
+  display: block;
+}
+
+.header .header-inner .item .guan {
+  width: 44px;
+  height: 44px;
+  display: none;
+  float: left;
+  background: red;
+  text-align: center;
+  position: relative;
+}
+
+.header .header-inner .item .guan .shu1 {
+  transition: transform .8s ease;
+}
+
+.header .header-inner .item .guan .shu2 {
+  transition: transform .8s ease;
+}
+
+.header .header-inner .item .guan .shu {
+  display: inline-block;
+  position: absolute;
+  width: 1px;
+  height: 30px;
+  background: blue;
+  top: 8px;
+}
+
+.header .header-inner .apple {
+  width: 20px;
+  background: url("../img/apple.svg");
+}
+
+.header .header-inner .mac {
+  width: 31px;
+  background: url("../img/mac.svg");
+}
+
+.header .header-inner .ipad {
+  width: 30px;
+  background: url("../img/ipad.svg");
+}
+
+.header .header-inner .iphone {
+  width: 48px;
+  background: url("../img/iphone.svg");
+}
+
+.header .header-inner .watch {
+  width: 44px;
+  background: url("../img/watch.svg");
+}
+
+.header .header-inner .tv {
+  width: 20px;
+  background: url("../img/tv.svg");
+}
+
+.header .header-inner .music {
+  width: 40px;
+  background: url("../img/music.svg");
+}
+
+.header .header-inner .support {
+  width: 57px;
+  background: url("../img/support.svg");
+}
+
+.header .header-inner .search {
+  width: 20px;
+  background: url("../img/search.svg");
+}
+
+.header .header-inner .bag {
+  width: 18px;
+  background: url("../img/bag.svg");
+}
+
+.find .header-inner .searchz-box {
+  z-index: 10000;
+  opacity: 1;
+}
+
+.find .header-inner .searchz-box .search-box {
+  transform: translate3d(0, 0, 0);
+}
+
+.find .header-inner .searchz-box .card {
+  opacity: 1;
+}
+
+.find .header-inner .searchz-box .card .xiala li {
+  transform: translate3d(0, 0, 0);
+}
+
+.find .header-inner .nav .item .bag {
+  display: none;
+}
+
+.find .header-inner .nav .item .guan {
+  display: block;
+}
+
+.find .header-inner .nav .item .guan .shu1 {
+  transform: rotate(45deg);
+}
+
+.find .header-inner .nav .item .guan .shu2 {
+  transform: rotate(-45deg);
+}
+
+.find .header-inner .quan li .bag {
+  display: none;
+}
+
+.find .header-inner .quan li .guan {
+  display: block;
+}
+
+.header-inner.zhzz .phone .item .bag {
+  display: none;
+}
+
+.header-inner.zhzz .zhankai-box {
+  display: block;
+}
+
+.carousel {
+  position: relative;
+  height: calc(100vh - 130px);
+  min-height: 130px;
+}
+
+.carousel:hover .btn {
+  display: block;
+}
+
+.carousel .gallery-slide-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.carousel a {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform .8s ease;
+  transform: translate3d(0, 0, 0);
+}
+
+.carousel a .series {
+  margin-top: 350px;
+  color: #333;
+}
+
+.carousel a .this7 {
+  position: absolute;
+  height: 55px;
+  top: 10px;
+  left: 50%;
+}
+
+.carousel a .iphoness {
+  background: url("../img/iphoness.png") no-repeat center center;
+  width: 95px;
+  margin-left: -47.5px;
+}
+
+.carousel a .watchss {
+  background: url("../img/watchss.png") no-repeat center center;
+  width: 148px;
+  margin-left: -74px;
+}
+
+.carousel a .airpodss {
+  background: url("../img/airpodss.png") no-repeat center center;
+  width: 108px;
+  margin-left: -54px;
+}
+
+.carousel a .eventss {
+  background: url("../img/eventss.png") no-repeat center center;
+  width: 283px;
+  margin-left: -141.5px;
+}
+
+.carousel a h2 {
+  width: 100%;
+  text-align: center;
+  letter-spacing: -2px;
+  font-family: "Myriad Set Pro","Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-weight: normal;
+  font-size: 42px;
+  margin-top: 65px;
+  color: #fff;
+}
+
+.carousel a.active {
+  z-index: 10;
+  display: block;
+  transform: translate3d(0, 0, 0);
+}
+
+.carousel a.leave {
+  display: block;
+  transform: translate3d(-200px, 0, 0);
+}
+
+.carousel a.enter {
+  display: block;
+  transform: translate3d(100%, 0, 0);
+}
+
+.carousel a.zuojin {
+  display: block;
+  z-index: 10;
+  transform: translate3d(-100%, 0, 0);
+}
+
+.carousel a.zuozou {
+  display: block;
+  transform: translate3d(200px, 0, 0);
+}
+
+.carousel .dotz-box {
+  z-index: 100;
+  width: 100%;
+  height: 22px;
+  position: absolute;
+  bottom: 20px;
+}
+
+.carousel .dotz-box .dot-box {
+  width: 240px;
+  height: 100%;
+  margin: auto;
+  text-align: justify;
+}
+
+.carousel .dotz-box .dot-box::after {
+  width: 100%;
+  content: '';
+  display: inline-block;
+  height: 0;
+}
+
+.carousel .dotz-box .dot-box .dot {
+  width: 50px;
+  padding: 10px 0;
+  background: #ccc;
+  height: 2px;
+  background-clip: content-box;
+  display: inline-block;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.carousel .dotz-box .dot-box .dot.changec {
+  background: #666;
+  background-clip: content-box;
+}
+
+.btn {
+  width: 100%;
+  position: absolute;
+  height: 64px;
+  top: 50%;
+  margin-top: -32px;
+  z-index: 100;
+  display: none;
+}
+
+.btn .btl {
+  width: 64px;
+  height: 64px;
+  background: rgba(180, 180, 180, 0.25);
+  color: dimgray;
+  font-family: '黑体';
+  float: left;
+  border-radius: 50%;
+  margin-left: 18px;
+  font-size: 30px;
+  text-align: center;
+  line-height: 64px;
+  cursor: pointer;
+}
+
+.btn .btr {
+  width: 64px;
+  height: 64px;
+  background: rgba(180, 180, 180, 0.25);
+  font-family: '黑体';
+  color: dimgray;
+  float: right;
+  border-radius: 50%;
+  margin-right: 18px;
+  font-size: 30px;
+  text-align: center;
+  line-height: 64px;
+  cursor: pointer;
+}
+
+.iphone5 {
+  background: url(../img/iphone_xlarge.jpg) no-repeat bottom center;
+  background-size: contain;
+  background-color: #000;
+}
+
+.watchs {
+  background: url(../img/watch_large.jpg) no-repeat bottom center;
+  background-size: contain;
+  background-color: #f3f3f3;
+}
+
+.airpods {
+  background: url(../img/airpods_xlarge.jpg) no-repeat bottom center;
+  background-size: contain;
+  background-color: #fff;
+}
+
+.event {
+  background: url(../img/event_large.jpg) no-repeat bottom center;
+  background-size: contain;
+  background-color: #000;
+}
+
+.row {
+  width: 100%;
+  overflow: hidden;
+}
+
+.col {
+  height: 200px;
+  float: left;
+}
+
+.d-1 {
+  width: 8.33333%;
+}
+
+.d-2 {
+  width: 16.66667%;
+}
+
+.d-3 {
+  width: 25%;
+}
+
+.d-4 {
+  width: 33.33333%;
+}
+
+.d-5 {
+  width: 41.66667%;
+}
+
+.d-6 {
+  width: 50%;
+}
+
+.d-7 {
+  width: 58.33333%;
+}
+
+.d-8 {
+  width: 66.66667%;
+}
+
+.d-9 {
+  width: 75%;
+}
+
+.d-10 {
+  width: 83.33333%;
+}
+
+.d-11 {
+  width: 91.66667%;
+}
+
+.d-12 {
+  width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .m-1 {
+    width: 8.33333%;
+  }
+  .m-2 {
+    width: 16.66667%;
+  }
+  .m-3 {
+    width: 25%;
+  }
+  .m-4 {
+    width: 33.33333%;
+  }
+  .m-5 {
+    width: 41.66667%;
+  }
+  .m-6 {
+    width: 50%;
+  }
+  .m-7 {
+    width: 58.33333%;
+  }
+  .m-8 {
+    width: 66.66667%;
+  }
+  .m-9 {
+    width: 75%;
+  }
+  .m-10 {
+    width: 83.33333%;
+  }
+  .m-11 {
+    width: 91.66667%;
+  }
+  .m-12 {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .s-1 {
+    width: 8.33333%;
+  }
+  .s-2 {
+    width: 16.66667%;
+  }
+  .s-3 {
+    width: 25%;
+  }
+  .s-4 {
+    width: 33.33333%;
+  }
+  .s-5 {
+    width: 41.66667%;
+  }
+  .s-6 {
+    width: 50%;
+  }
+  .s-7 {
+    width: 58.33333%;
+  }
+  .s-8 {
+    width: 66.66667%;
+  }
+  .s-9 {
+    width: 75%;
+  }
+  .s-10 {
+    width: 83.33333%;
+  }
+  .s-11 {
+    width: 91.66667%;
+  }
+  .s-12 {
+    width: 100%;
+  }
+}
+
+.ios {
+  background: url("../img/ios_large.jpg") no-repeat center center;
+}
+
+.music {
+  background: url("../img/music_large.jpg") no-repeat center center;
+}
+
+.watchos {
+  background: url("../img/watchos_large.jpg") no-repeat center center;
+}
+
+.iphone_upgrade {
+  background: url("../img/iphone_upgrade_large.jpg") no-repeat center center;
+}
+
+@media screen and (max-width: 1024px) {
+  .foot-box .foot-inner {
+    width: 100%;
+  }
+  .header .header-inner {
+    width: 100%;
+  }
+  .ios {
+    background: url(../img/ios_medium.jpg) no-repeat center center;
+  }
+  .music {
+    background: url(../img/music_medium.jpg) no-repeat center center;
+  }
+  .watchos {
+    background: url(../img/watchos_medium.jpg) no-repeat center center;
+  }
+  .iphone_upgrade {
+    background: url(../img/iphone_upgrade_medium.jpg) no-repeat center center;
+  }
+}
+
+.foot-box {
+  width: 100%;
+  background: #f2f2f2;
+}
+
+.foot-box .foot-inner {
+  max-width: 980px;
+  position: relative;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+}
+
+.foot-box .foot-inner .ac-box {
+  overflow: hidden;
+  width: 100%;
+  padding-top: 30px;
+}
+
+.foot-box .foot-inner .ac-box .ac {
+  width: 20%;
+  float: left;
+  font-size: 12px;
+}
+
+.foot-box .foot-inner .ac-box .ac .h-box {
+  height: 20px;
+  line-height: 20px;
+}
+
+.foot-box .foot-inner .ac-box .ac h2 {
+  font-size: 12px;
+  color: #333;
+  font-weight: normal;
+  float: left;
+}
+
+.foot-box .foot-inner .ac-box .ac .jia {
+  float: right;
+  display: none;
+}
+
+.foot-box .foot-inner .ac-box .ac .ads a {
+  display: inline-block;
+  color: #666;
+  line-height: 20px;
+}
+
+.foot-box .foot-inner .ac-box .ac .ads a:hover {
+  text-decoration: underline;
+}
+
+.foot-box .foot-inner .footbt-box {
+  margin: 0 auto;
+  padding: 20px 0 24px;
+  font-size: 12px;
+  color: #999;
+}
+
+.foot-box .foot-inner .footbt-box .shop-box {
+  height: 26px;
+  border-bottom: 1px solid #e3e3e3;
+  margin-bottom: 10px;
+}
+
+.foot-box .foot-inner .footbt-box .shop-box a {
+  color: #0070c9;
+}
+
+.foot-box .foot-inner .footbt-box .shop-box a:hover {
+  text-decoration: underline;
+  color: #333;
+}
+
+.foot-box .foot-inner .footbt-box .legal-box {
+  height: 20px;
+}
+
+.foot-box .foot-inner .footbt-box .legal-box .copyright {
+  float: left;
+  margin-right: 30px;
+}
+
+.foot-box .foot-inner .footbt-box .legal-box .links {
+  width: 410px;
+  height: 20px;
+  float: left;
+}
+
+.foot-box .foot-inner .footbt-box .legal-box .links a {
+  color: #666;
+}
+
+.foot-box .foot-inner .footbt-box .legal-box .links a:hover {
+  text-decoration: underline;
+  color: #333;
+}
+
+.foot-box .foot-inner .footbt-box .legal-box .locale {
+  height: 20px;
+  width: 104px;
+  float: right;
+}
+
+.foot-box .foot-inner .footbt-box .legal-box .locale .amlogo {
+  width: 16px;
+  height: 16px;
+  float: left;
+  margin-right: 9px;
+  background: url(../img/16.png) no-repeat center center;
+}
+
+@media screen and (max-width: 768px) {
+  .foot-box .foot-inner .footbt-box {
+    width: 100%;
+  }
+  .ios {
+    background: url(../img/ios_small.jpg) no-repeat center center;
+  }
+  .music {
+    background: url(../img/music_small.jpg) no-repeat center center;
+  }
+  .watchos {
+    background: url(../img/watchos_small.jpg) no-repeat center center;
+  }
+  .iphone_upgrade {
+    background: url(../img/iphone_upgrade_small.jpg) no-repeat center center;
+  }
+  .header .header-inner .phone {
+    display: block;
+  }
+  .header .header-inner {
+    width: 100%;
+  }
+  .header .header-inner .quan {
+    display: none;
+  }
+  .header .header-inner .searchz-box {
+    display: none;
+  }
+  .foot-box .foot-inner .ac-box .ac {
+    width: 100%;
+    float: none;
+  }
+  .foot-box .foot-inner .ac-box .ac .h-box {
+    width: 100%;
+    height: 38px;
+    border-bottom: 1px solid #e3e3e3;
+  }
+  .foot-box .foot-inner .ac-box .ac .h-box h2 {
+    line-height: 38px;
+  }
+  .foot-box .foot-inner .ac-box .ac .h-box .jia {
+    text-align: center;
+    line-height: 38px;
+    display: block;
+  }
+  .foot-box .foot-inner .ac-box .ac .ads {
+    display: none;
+  }
+  .foot-box {
+    margin: 0;
+    padding: 0;
+  }
+  .foot-box .foot-inner {
+    margin: 0;
+    padding: 0;
+  }
+  .foot-box .foot-inner .footbt-box {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.foot-box .foot-inner .foot-dong .ac .ads {
+  display: block;
+}
